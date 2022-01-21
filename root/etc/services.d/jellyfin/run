@@ -12,6 +12,6 @@ if [ -n "${UMASK_SET}" ] && [ -z "${UMASK}" ]; then
 fi
 
 exec \
-    s6-setuidgid abc /usr/bin/jellyfin \
+    s6-setuidgid root /usr/bin/jellyfin \
     --ffmpeg=/usr/lib/jellyfin-ffmpeg/ffmpeg \
     --webdir=/usr/share/jellyfin/web
